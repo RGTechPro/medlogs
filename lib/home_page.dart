@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:medlogs/widget/type_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,6 +9,11 @@ class HomePage extends StatelessWidget {
     return SafeArea
   (
       child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(items: [
+
+          
+        ])
+        ,
     body:Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       
@@ -43,7 +47,23 @@ decoration:BoxDecoration(
     borderRadius: BorderRadius.circular(15.0),
     child: Image.network('https://picsum.photos/200')) ,
   ),
-)
+),
+Row(
+  
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+TypeCard(typeName: 'Medicine',),
+TypeCard(typeName: 'Medical reports',)
+
+],),
+Row(
+  
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+TypeCard(typeName: 'Medicine',),
+TypeCard(typeName: 'Medical reports',)
+
+],)
 
       ],
     ) ,

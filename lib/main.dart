@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medlogs/home_page.dart';
+import 'home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
      
         primarySwatch: Colors.blue,
       ),
-      home: HomePage()
+      home:const Home()
     );
   }
 }

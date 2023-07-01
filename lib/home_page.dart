@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medlogs/medicine.dart';
+import 'package:medlogs/screens/medicine.dart';
+
 import 'package:medlogs/widget/type_card.dart';
 
 class HomePage extends StatelessWidget {

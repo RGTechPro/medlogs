@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medlogs/widget/date_card.dart';
+import 'package:medlogs/widget/medicine_card.dart';
 
 class MedicinePage extends StatelessWidget {
   List<String> days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -60,10 +61,18 @@ class MedicinePage extends StatelessWidget {
                         // if(index>7){
                         //   dayIndex=
                         // }
-                        return DateCard(day: days[0], date: index+1);
+                        return DateCard(day: days[0], date: index + 1);
                       },
                       itemCount: 30,
                     )),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                  
+                  return MedicineCard();
+                }),
               )
             ],
           ),

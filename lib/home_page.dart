@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:medlogs/screens/medicine.dart';
-
+import 'package:medlogs/report.dart';
 import 'package:medlogs/widget/type_card.dart';
+import 'medicine.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Column( 
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Padding(
@@ -52,6 +52,10 @@ class HomePage extends StatelessWidget {
             ),
             TypeCard(
               typeName: 'Medical reports',
+              page: (){
+                   Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ReportPage()));
+              },
             )
           ],
         ),

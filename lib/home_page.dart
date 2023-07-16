@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medlogs/pdf_scan.dart';
 import 'package:medlogs/report.dart';
 import 'package:medlogs/widget/type_card.dart';
 import 'medicine.dart';
@@ -63,7 +64,8 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TypeCard(
-              typeName: 'Medicine',
+              typeName: 'PDF SCAN',
+              page: () => Navigator.push(context, MaterialPageRoute(builder: (context) => PDFScanScreen(),)),
             ),
             TypeCard(
               typeName: 'Medical reports',

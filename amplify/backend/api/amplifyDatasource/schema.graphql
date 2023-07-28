@@ -1,0 +1,20 @@
+type HealthReport @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  reportType: String!
+  doctor: String
+  docLink: AWSURL
+}
+
+type Medicine @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  dosage: Int
+  time: String!
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  email: String!
+  password: String!
+}

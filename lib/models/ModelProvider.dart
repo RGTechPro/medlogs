@@ -23,7 +23,6 @@ import 'package:amplify_core/amplify_core.dart' as amplify_core;
 import 'HealthReport.dart';
 import 'Medicine.dart';
 import 'User.dart';
-
 export 'HealthReport.dart';
 export 'Medicine.dart';
 export 'User.dart';
@@ -32,15 +31,19 @@ class ModelProvider implements amplify_core.ModelProviderInterface {
   @override
   String version = "d9a7774c580909e4084f2571efe7bc50";
   @override
-  List<amplify_core.ModelSchema> modelSchemas = [HealthReport.schema, Medicine.schema, User.schema];
+  List<amplify_core.ModelSchema> modelSchemas = [
+    HealthReport.schema,
+    Medicine.schema,
+    User.schema
+  ];
   @override
   List<amplify_core.ModelSchema> customTypeSchemas = [];
   static final ModelProvider _instance = ModelProvider();
 
   static ModelProvider get instance => _instance;
-  
+
   amplify_core.ModelType getModelTypeByModelName(String modelName) {
-    switch(modelName) {
+    switch (modelName) {
       case "HealthReport":
         return HealthReport.classType;
       case "Medicine":
@@ -48,11 +51,12 @@ class ModelProvider implements amplify_core.ModelProviderInterface {
       case "User":
         return User.classType;
       default:
-        throw Exception("Failed to find model in model provider for model name: " + modelName);
+        throw Exception(
+            "Failed to find model in model provider for model name: " +
+                modelName);
     }
   }
 }
-
 
 class ModelFieldValue<T> {
   const ModelFieldValue.value(this.value);

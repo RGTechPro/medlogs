@@ -27,8 +27,7 @@ ProfilePage()
         bottomNavigationBar: BottomNavigationBar(
             onTap: (int index) {
               setState(() {
-                            selectedIndex = index;
-    
+            selectedIndex = index;
               });
             },
             selectedItemColor: Colors.black,
